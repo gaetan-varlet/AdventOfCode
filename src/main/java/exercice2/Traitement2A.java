@@ -3,7 +3,9 @@ package exercice2;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class TraitementA implements LigneListener {
+import utils.LigneListener;
+
+public class Traitement2A implements LigneListener {
 	
 	private int somme;
 
