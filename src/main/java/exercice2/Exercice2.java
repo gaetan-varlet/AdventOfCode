@@ -18,8 +18,8 @@ public class Exercice2 {
 	private static String separateur = "\t";
 
 	public static void main(String[] args) throws IOException {
-		exercice2a();
-		exercice2b();
+		exercice2a(); // 42 299
+		exercice2b(); // 277
 	}
 	
 	
@@ -33,7 +33,7 @@ public class Exercice2 {
 			int ecart = tab2[tab2.length-1] - tab2[0];
 			total = total + ecart;
 		}
-		System.out.println(total); // 42 299
+		System.out.println(total);
 	}
 	
 	private static void exercice2b() throws IOException{
@@ -52,7 +52,7 @@ public class Exercice2 {
 				}
 			}
 		}
-		System.out.println(total); // 277
+		System.out.println(total);
 	}
 	
 	private static List<String[]> bufferReader(String file, Charset charset, String separateur) throws IOException{

@@ -29,17 +29,33 @@ public class Exercice4 {
 		
 		int total = 0;
 		for (String[] phrase : listePhrase) {
-			int phraseCorrecte = phraseCorrecte(phrase);
+			int phraseCorrecte = phraseCorrecte4a(phrase);
 			total = total + phraseCorrecte;
 		}
 		System.out.println(total);
 	}
 	
-	private static int phraseCorrecte(String[] phrase){
+	private static int phraseCorrecte4a(String[] phrase){
 		int phraseCorrecte=0;	
 		Set<String> liste = new HashSet<>();
 
 		for (String mot : phrase) {
+			if(liste.add(mot)==false){
+				phraseCorrecte=0;
+				break;
+			} else{
+				phraseCorrecte=1;
+			}
+		}	
+		return phraseCorrecte;
+	}
+	
+	private static int phraseCorrecte4b(String[] phrase){
+		int phraseCorrecte=0;	
+		Set<String> liste = new HashSet<>();
+
+		for (String mot : phrase) {
+			
 			if(liste.add(mot)==false){
 				phraseCorrecte=0;
 				break;
