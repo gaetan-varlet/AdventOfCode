@@ -19,20 +19,26 @@ public class Exercice4 {
 	private static String separateur = " ";
 
 	public static void main(String[] args) throws IOException {
+		exercice4("src/main/java/exercice4/inputTestExercice4a.txt","a"); // 2
+		exercice4("src/main/java/exercice4/inputExercice4.txt","ba"); // 455
 
-		exercice4a("src/main/java/exercice4/inputTestExercice4.txt"); // 2
-		exercice4a("src/main/java/exercice4/inputExercice4.txt"); // 455
-		
+		exercice4("src/main/java/exercice4/inputTestExercice4b.txt","b"); // 3
+		exercice4("src/main/java/exercice4/inputExercice4.txt","b"); // 186
 	}
 	
 	
-	private static void exercice4a(String file) throws IOException{
+	private static void exercice4(String file, String exo) throws IOException{
 		List<String[]> listePhrase = bufferReader(file, charset, separateur);
 		
 		int total = 0;
 		for (String[] phrase : listePhrase) {
-			int phraseCorrecte = phraseCorrecte4a(phrase);
-			total = total + phraseCorrecte;
+			if("a".equalsIgnoreCase(exo)){
+				int phraseCorrecte = phraseCorrecte4a(phrase);
+				total = total + phraseCorrecte;
+			} else if("b".equalsIgnoreCase(exo)){
+				int phraseCorrecte = phraseCorrecte4b(phrase);
+				total = total + phraseCorrecte;
+			}
 		}
 		System.out.println(total);
 	}
