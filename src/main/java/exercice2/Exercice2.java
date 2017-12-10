@@ -1,3 +1,5 @@
+package exercice2;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -9,9 +11,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Main {
+public class Exercice2 {
 	
-	private static String file = "input.txt";
+	private static String file = "src/main/java/exercice2/inputExercice2.txt";
 	private static Charset charset = StandardCharsets.UTF_8;
 
 	public static void main(String[] args) throws IOException {
