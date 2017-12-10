@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Main {
 	
-	private static String file = "donnees.txt";
+	private static String file = "input.txt";
 	private static Charset charset = StandardCharsets.UTF_8;
 
 	public static void main(String[] args) throws IOException {
