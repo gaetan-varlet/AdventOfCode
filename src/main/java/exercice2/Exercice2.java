@@ -15,6 +15,7 @@ public class Exercice2 {
 	
 	private static String file = "src/main/java/exercice2/inputExercice2.txt";
 	private static Charset charset = StandardCharsets.UTF_8;
+	private static String separateur = "\t";
 
 	public static void main(String[] args) throws IOException {
 		exercice2a();
@@ -23,7 +24,7 @@ public class Exercice2 {
 	
 	
 	private static void exercice2a() throws IOException{
-		List<String[]> liste = bufferReader(file, charset, "\t");
+		List<String[]> liste = bufferReader(file, charset, separateur);
 
 		int total=0;
 		for (String[] tab : liste) {
@@ -36,7 +37,7 @@ public class Exercice2 {
 	}
 	
 	private static void exercice2b() throws IOException{
-		List<String[]> liste = bufferReader(file, charset, "\t");
+		List<String[]> liste = bufferReader(file, charset, separateur);
 		
 		int total=0;
 		for (String[] tab : liste) {
