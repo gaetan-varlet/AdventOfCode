@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -21,6 +22,7 @@ public class Exercice4 {
 
 		exercice4a("src/main/java/exercice4/inputTestExercice4.txt"); // 2
 		exercice4a("src/main/java/exercice4/inputExercice4.txt"); // 455
+		
 	}
 	
 	
@@ -55,7 +57,7 @@ public class Exercice4 {
 		Set<String> liste = new HashSet<>();
 
 		for (String mot : phrase) {
-			
+			mot = trierLettres(mot);
 			if(liste.add(mot)==false){
 				phraseCorrecte=0;
 				break;
@@ -64,6 +66,13 @@ public class Exercice4 {
 			}
 		}	
 		return phraseCorrecte;
+	}
+	
+	private static String trierLettres(String mot){
+	    char[] chars = mot.toCharArray();
+	    Arrays.sort(chars);
+	    String sorted = new String(chars);
+	    return sorted;	
 	}
 	
 	private static List<String[]> bufferReader(String file, Charset charset, String separateur) throws IOException{
