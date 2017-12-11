@@ -1,6 +1,5 @@
 package exercice4;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,7 +21,7 @@ public class Traitement4B implements LigneListener {
      * On ajoute ce nombre au total courant pour avoir le total des différentes lignes traités.  
      */
     @Override
-    public void ligneLue(String ligne) throws IOException {
+    public void ligneLue(String ligne) {
 	int phraseCorrecte=0;	
 	String[] phrase = ligne.split(" ");
 	Set<String> liste = new HashSet<>();

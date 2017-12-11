@@ -1,6 +1,5 @@
 package exercice2;
 
-import java.io.IOException;
 import java.util.Arrays;
 
 import utils.LigneListener;
@@ -19,7 +18,7 @@ public class Traitement2B implements LigneListener {
      * On ajoute ce nombre à la somme courante pour avoir la somme des différentes lignes traités. 
      */
     @Override
-    public void ligneLue(String ligne) throws IOException {
+    public void ligneLue(String ligne) {
 	String[] tab = ligne.split("\t");
 	int[] tab2 = Arrays.asList(tab).stream().mapToInt(Integer::parseInt).toArray();
 	for(int i=0;i<tab2.length;i++){
