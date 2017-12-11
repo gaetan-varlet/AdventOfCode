@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Exercice2Test{
     
-    private static String file = "src/main/java/exercice2/inputExercice2.txt";
+    private static String file = "src/main/resources/inputExercice2.txt";
     private static Charset charset = StandardCharsets.UTF_8;
     
     @Test
