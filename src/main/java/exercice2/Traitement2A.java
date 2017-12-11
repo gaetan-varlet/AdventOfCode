@@ -13,6 +13,10 @@ public class Traitement2A implements LigneListener {
 	return somme;
     }
 
+    /**
+     * On récupère une ligne qui contient des nombres et on calcule l'écart entre le nombre le plus grand et le nombre le plus petit. <br/>
+     * On ajoute ce nombre à la somme courante pour avoir la somme des différentes lignes traités. 
+     */
     @Override
     public void ligneLue(String ligne) throws IOException {
 	String[] tab = ligne.split("\t");

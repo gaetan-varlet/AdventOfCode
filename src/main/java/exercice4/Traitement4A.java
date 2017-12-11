@@ -14,6 +14,11 @@ public class Traitement4A implements LigneListener {
 	return total;
     }
 
+    /**
+     * On récupère une ligne qui contient des mots et on regarde s'il y a au moins 2 mots identiques. <br/>
+     * Si c'est le cas, phraseCorrecte=0, sinon phraseCorrecte=1. <br/>
+     * On ajoute ce nombre au total courant pour avoir le total des différentes lignes traités.  
+     */
     @Override
     public void ligneLue(String ligne) throws IOException {
 	int phraseCorrecte=0;	
