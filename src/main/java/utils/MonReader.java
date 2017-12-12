@@ -12,7 +12,7 @@ import java.util.List;
 public class MonReader {
 
     private List<LigneListener> listeLigneListener = new ArrayList<LigneListener>();
-    
+
     private ClotureListener clotureListener;
 
     public void addLigneListener (LigneListener ligneListener) throws IllegalArgumentException {
@@ -21,9 +21,9 @@ public class MonReader {
 	}
 	listeLigneListener.add(ligneListener);
     }
-    
+
     public void setClotureListener(ClotureListener clotureListener) {
-        this.clotureListener = clotureListener;
+	this.clotureListener = clotureListener;
     }
 
 

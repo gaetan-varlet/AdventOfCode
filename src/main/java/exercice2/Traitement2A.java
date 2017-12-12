@@ -5,9 +5,9 @@ import java.util.Arrays;
 import utils.LigneListener;
 
 public class Traitement2A implements LigneListener {
-	
+
     private int somme;
-    
+
     public int getSomme() {
 	return somme;
     }

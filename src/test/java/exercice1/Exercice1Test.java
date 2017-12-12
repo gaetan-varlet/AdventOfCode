@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class Exercice1Test{
-    
+
     private String chaine = "938427449468363235935164141137457346627316468733753676977948743374917918556846129623335"
 	    + "36119926727537781269352767698854247195532916161361722988831566262541512788525823979496978744"
 	    + "621785362953418221373775633228155275922677912131154186353631748761321962343748876263249313712"
@@ -28,24 +28,24 @@ public class Exercice1Test{
 	    + "19429482686856157858685132626261973127266539771138145974528121819651515591787769466318673259968891287814"
 	    + "924268874158482283186174884581787168162169794447237768865836814569861486145651813837698968816692118722472"
 	    + "6942589996534179549171859786241718727295379";
-    
+
     @Test
     public void exercice1Test(){
 	Exercice1 exercice1 = new Exercice1();
-	
+
 	assertEquals(3,exercice1.exercice1("1122",1));
 	assertEquals(4,exercice1.exercice1("1111",1));
 	assertEquals(0,exercice1.exercice1("1234",1));
 	assertEquals(9,exercice1.exercice1("91212129",1));
 	assertEquals(1089,exercice1.exercice1(chaine,1));
-	
+
 	assertEquals(6,exercice1.exercice1("1212",2));
 	assertEquals(0,exercice1.exercice1("1221",2));
 	assertEquals(4,exercice1.exercice1("123425",3));
 	assertEquals(12,exercice1.exercice1("123123",3));
 	assertEquals(4,exercice1.exercice1("12131415",4));
 	assertEquals(1156,exercice1.exercice1(chaine,chaine.length()/2));
-	
+
 	assertEquals(2134,chaine.length());	
     }
 }

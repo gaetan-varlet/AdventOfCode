@@ -7,7 +7,7 @@ import java.util.Set;
 import utils.LigneListener;
 
 public class Traitement4B implements LigneListener {
-    
+
     private int total;
 
     public int getTotal() {
@@ -36,7 +36,7 @@ public class Traitement4B implements LigneListener {
 	}
 	total = total + phraseCorrecte;
     }
-    
+
     /**
      * trie les lettres du String en entrée dans l'ordre alphabétique et retourne le String trié
      * @param mot le String à trier

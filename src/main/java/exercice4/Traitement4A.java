@@ -6,7 +6,7 @@ import java.util.Set;
 import utils.LigneListener;
 
 public class Traitement4A implements LigneListener {
-    
+
     private int total;
 
     public int getTotal() {
