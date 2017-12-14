@@ -9,6 +9,7 @@ public class Traitement9 implements LigneListener{
     
     private int nombreDeGroupe;
     private int score;
+    private int nombreCaractereEntreChevron;
 
     public int getNombreDeGroupe() {
         return nombreDeGroupe;
@@ -18,7 +19,11 @@ public class Traitement9 implements LigneListener{
         return score;
     }
 
-    @Override
+    public int getNombreCaractereEntreChevron() {
+		return nombreCaractereEntreChevron;
+	}
+
+	@Override
     public void ligneLue(String ligne) {
 
 	System.out.println("DEBUT");
@@ -44,7 +49,8 @@ public class Traitement9 implements LigneListener{
 	}
 	System.out.println("APRES LA SUPPRESSION DES POINTS D'EXCLAMATIONS ET DU CHARACTERE D'APRES");
 	afficher(listeChar);
-	System.out.println("taille de la liste : "+listeChar.size());
+	int tailleAvantSuppCarEntreChevron = listeChar.size();
+	System.out.println("taille de la liste : "+tailleAvantSuppCarEntreChevron);
 
 	
 	for (int i = 0; i < listeChar.size(); i++) {
@@ -55,9 +61,10 @@ public class Traitement9 implements LigneListener{
 		}
 	    }
 	}
-	System.out.println("APRES LA SUPPRESSION DES CHARACTERES ENTRE < et >");
+	System.out.println("APRES LA SUPPRESSION DES CARACTERES ENTRE < et >");
 	afficher(listeChar);
-	System.out.println("taille de la liste : "+listeChar.size());
+	int tailleApresSuppCarEntreChevron = listeChar.size();
+	System.out.println("taille de la liste : "+tailleApresSuppCarEntreChevron);
 
 	
 	while(listeChar.contains('<')){
@@ -84,6 +91,8 @@ public class Traitement9 implements LigneListener{
 	System.out.println("taille de la liste : "+listeChar.size());
 	System.out.println("FIN");
 	
+	
+	nombreCaractereEntreChevron=tailleAvantSuppCarEntreChevron-tailleApresSuppCarEntreChevron;
 	
 	nombreDeGroupe = 0;	
 	score = 0;
