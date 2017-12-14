@@ -61,7 +61,17 @@ public class Exercice9Test{
 	monReader.addLigneListener(traitement9);
 	monReader.lireFichier("src/test/resources/inputExercice9.txt", charset);		
 	assertEquals(1605, traitement9.getNombreDeGroupe());
-	assertEquals(560659, traitement9.getScore()); // ni 501 966, ni 560 569
+	assertEquals(11846, traitement9.getScore()); // ni 501 966, ni 560 569
+    }
+
+    @Test
+    public void exercice9TestA3() throws IOException {
+	MonReader monReader = new MonReader();
+	Traitement9 traitement9 = new Traitement9();
+	monReader.addLigneListener(traitement9);
+	monReader.lireFichier("src/test/resources/inputExercice9Olivier.txt", charset);		
+	assertEquals(1325, traitement9.getNombreDeGroupe());
+	assertEquals(11898, traitement9.getScore());
     }
 
 }

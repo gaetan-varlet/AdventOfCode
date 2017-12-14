@@ -75,8 +75,8 @@ public class Traitement9 implements LigneListener{
 	
 	
 	for (int i = 0; i < listeChar.size(); i++){
-	    if(listeChar.get(i)=='{' && listeChar.get(i+1)==','){
-		listeChar.remove(i+1);
+	    if(listeChar.get(i)==','){
+		listeChar.remove(i);
 	    }
 	}
 	System.out.println("APRES LA SUPPRESSION DES VIRGULES APRES LES { (inutile pour les jeux de test)");
@@ -93,7 +93,7 @@ public class Traitement9 implements LigneListener{
 	       nombreDeGroupe++;
 	       score = score + valeurCourante;
 	       valeurCourante++;
-	   } else if(character==','){
+	   } else if(character=='}'){
 	      	valeurCourante--;
 	   }
 	}
