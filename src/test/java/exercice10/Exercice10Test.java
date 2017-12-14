@@ -17,7 +17,7 @@ public class Exercice10Test{
 	private Charset charset = StandardCharsets.UTF_8;
 
 	@Test
-	public void exercice9TestA1() throws IOException {
+	public void exercice10TestA1() throws IOException {
 		MonReader monReader = new MonReader();
 		Traitement10 traitement10 = new Traitement10();
 		traitement10.setLongueurListe(5);
@@ -27,12 +27,12 @@ public class Exercice10Test{
 	}
 	
 	@Test
-	public void exercice9TestA2() throws IOException {
+	public void exercice10TestA2() throws IOException {
 		MonReader monReader = new MonReader();
 		Traitement10 traitement10 = new Traitement10();
 		traitement10.setLongueurListe(256);
 		monReader.addLigneListener(traitement10);
 		monReader.lireFichier("src/test/resources/inputExercice10.txt", charset);		
-		assertEquals(1, traitement10.getResultat());
+		assertEquals(0, traitement10.getResultat());
 	}
 }
