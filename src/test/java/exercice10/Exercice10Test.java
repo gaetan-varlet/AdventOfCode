@@ -33,6 +33,6 @@ public class Exercice10Test{
 		traitement10.setLongueurListe(256);
 		monReader.addLigneListener(traitement10);
 		monReader.lireFichier("src/test/resources/inputExercice10.txt", charset);		
-		assertEquals(0, traitement10.getResultat());
+		assertEquals(4114, traitement10.getResultat());
 	}
 }

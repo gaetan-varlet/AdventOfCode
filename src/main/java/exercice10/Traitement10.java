@@ -1,8 +1,6 @@
 package exercice10;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import utils.LigneListener;
 
@@ -19,34 +17,42 @@ public class Traitement10 implements LigneListener{
 		this.longueurListe = longueurListe;
 	}
 
-
+	
 	@Override
 	public void ligneLue(String ligne) {
 
 		String[] tabString = ligne.split(",");
 		int[] tab = Arrays.asList(tabString).stream().mapToInt(Integer::parseInt).toArray();
-		System.out.println(Arrays.toString(tab));
 
 		int positionDansLaListe = 0; // on commence à 0
 		// création de la liste à hacher, de longueur longueurListe
-		List<Integer> liste = new ArrayList<>();
+		int[] liste = new int[longueurListe];
 		for (int i = 0; i < longueurListe; i++) {
-			liste.add(i);
+			liste[i]=i;
 		}
-		System.out.println(liste.size());
 
+		for (int i = 0; i < tab.length; i++) {
+			int pas = 0;
+			if(tab[i]%2==0){
+				pas = tab[i]/2;
+			} else {
+				pas = (tab[i]-1)/2;
+			}
 
-		for (int i = 0; i < tab.length; i++) {	
-			// Tri dans la liste
+			for(int j=0;j<pas;j++){
+				int positionElementDebut = (positionDansLaListe+j)%liste.length;
+				int positionElementFin = (positionDansLaListe+tab[i]-1-j)%liste.length;
+				int nombre = liste[positionElementDebut];
+				liste[positionElementDebut]=liste[positionElementFin];
+				liste[positionElementFin]=nombre;
+			}
 
-
-			// Calcul du pas
-			int pas = tab[i] + i;
 			// calcul de la position pour laquelle on va commencer à la prochaine itération
-			positionDansLaListe=positionDansLaListe+pas;
+			positionDansLaListe=(positionDansLaListe+tab[i]+i)%liste.length;
 		}
 
-		resultat=liste.get(0)*liste.get(1);
+		resultat=liste[0]*liste[1];
 	}
+
 
 }
