@@ -15,6 +15,10 @@ public class Exercice3 {
 	private int inputCoordLigne;
 	private int inputCoordCol;
 
+
+	private int ligneCourante = positionInitial;
+	private int colonneCourante=positionInitial;
+
 	private int distanceDeManhattan;
 	private int valeurSuperieure;
 
@@ -40,81 +44,86 @@ public class Exercice3 {
 	 */
 	protected void traitement(boolean traitementA) throws Exception{
 		if(input<=0){
-		    throw new IllegalArgumentException("input doit être un nombre entier compris entre 1 et 9000");
+			throw new IllegalArgumentException("input doit être un nombre entier compris entre 1 et 9000");
 		}
 		if(traitementA==false && tab[0][0]!=0){
 			throw new Exception("vous devez instancier un nouvel objet pour calculer la première valeur "
 					+ "supérieure de l'input");
 		}
+		
+		remplissageTableau(traitementA);
+		calculPositionInput();
+		calculDistanceDeManhattan();
+	}
+
+
+	private void remplissageTableau(boolean traitementA){
 		// positionnement du 1 au milieu du tableau
 		tab[positionInitial][positionInitial]=1;
 		// on commence à remplir le tableau depuis ces coordonnées de départ.
-		int x=positionInitial;
-		int y=positionInitial;
+		ligneCourante = positionInitial;
+		colonneCourante = positionInitial;
 
 		// déclaration du chiffre qu'on va inscrire dans le tableau, en commençant par 2 car on a déja écrit 1;
 		int k=2;
 		// on boucle en remplissant le tableau en escargot
 		for (int i = 0; i < nombreTourDeBoucle; i++) {
 			for (int j = 1; j < 2+2*i; j++) {
-				y++;
+				colonneCourante++;
 				if(traitementA){
-					tab[x][y]=k++; //2 au premier tour du boucle i
+					tab[ligneCourante][colonneCourante]=k++; //2 au premier tour du boucle i
 				} else{
-					tab[x][y]=sommeCarre(x, y);
-					if(tab[x][y]>input){
-						valeurSuperieure=tab[x][y];
+					tab[ligneCourante][colonneCourante]=sommeCarre();
+					if(tab[ligneCourante][colonneCourante]>input){
+						valeurSuperieure=tab[ligneCourante][colonneCourante];
 						return;
 					}	
 				}
 			}
 			for (int j = 1; j < 2+2*i; j++) {
-				x--;
+				ligneCourante--;
 				if(traitementA){
-					tab[x][y]=k++; //3 au premier tour du boucle i
+					tab[ligneCourante][colonneCourante]=k++; //3 au premier tour du boucle i
 				} else{
-					tab[x][y]=sommeCarre(x, y);
-					if(tab[x][y]>input){
-						valeurSuperieure=tab[x][y];
+					tab[ligneCourante][colonneCourante]=sommeCarre();
+					if(tab[ligneCourante][colonneCourante]>input){
+						valeurSuperieure=tab[ligneCourante][colonneCourante];
 						return;
 					}	
 				}
 			}
 			for (int j = 1; j < 3+2*i; j++) {
-				y--;
+				colonneCourante--;
 				if(traitementA){
-					tab[x][y]=k++; //4 et 5 au premier tour du boucle i
+					tab[ligneCourante][colonneCourante]=k++; //4 et 5 au premier tour du boucle i
 				} else{
-					tab[x][y]=sommeCarre(x, y);
-					if(tab[x][y]>input){
-						valeurSuperieure=tab[x][y];
+					tab[ligneCourante][colonneCourante]=sommeCarre();
+					if(tab[ligneCourante][colonneCourante]>input){
+						valeurSuperieure=tab[ligneCourante][colonneCourante];
 						return;
 					}	
 				}
 			}
 			for (int j = 1; j < 3+2*i; j++) {
-				x++;
+				ligneCourante++;
 				if(traitementA){
-					tab[x][y]=k++; //6 et 7 au premier tour du boucle i
+					tab[ligneCourante][colonneCourante]=k++; //6 et 7 au premier tour du boucle i
 				} else{
-					tab[x][y]=sommeCarre(x, y);
-					if(tab[x][y]>input){
-						valeurSuperieure=tab[x][y];
+					tab[ligneCourante][colonneCourante]=sommeCarre();
+					if(tab[ligneCourante][colonneCourante]>input){
+						valeurSuperieure=tab[ligneCourante][colonneCourante];
 						return;
 					}	
 				}
 			}
 		}
-//		System.out.println(Arrays.deepToString(tab));
-
-		positionInput();
-		distanceDeManhattan = Math.abs(inputCoordLigne-positionInitial)+Math.abs(inputCoordCol-positionInitial);
+		//				System.out.println(Arrays.deepToString(tab));
 	}
 
 	/**
 	 * calcul la position dans le tableau (numéro de ligne et de colonne) du chiffre en input
 	 */
-	private void positionInput(){
+	private void calculPositionInput(){
 		for (int i = 0; i < tab.length; i++) {
 			for (int j = 0; j < tab.length; j++) {
 				if(tab[i][j]==input){
@@ -125,38 +134,42 @@ public class Exercice3 {
 			}	
 		}
 	}
+	
+	private void calculDistanceDeManhattan(){
+		distanceDeManhattan = Math.abs(inputCoordLigne-positionInitial)+Math.abs(inputCoordCol-positionInitial);
+	}
 
 	/**
 	 * calcule la somme des chiffres dans le tableau autour du chiffre sur lequel on est positionné
-	 * @param x ligne sur laquelle on est positionné
-	 * @param y colonne sur laquelle on est positionné
+	 * @param ligneCourante ligne sur laquelle on est positionné
+	 * @param colonneCourante colonne sur laquelle on est positionné
 	 * @return la somme
 	 */
-	private int sommeCarre(int x, int y){
+	private int sommeCarre(){
 		int somme=0;
-		if(x>0 && y>0){
-			somme = somme+tab[x-1][y-1];
+		if(ligneCourante>0 && colonneCourante>0){
+			somme = somme+tab[ligneCourante-1][colonneCourante-1];
 		}
-		if(x>0){
-			somme = somme+tab[x-1][y];
+		if(ligneCourante>0){
+			somme = somme+tab[ligneCourante-1][colonneCourante];
 		}
-		if(x>0 && y+1<tab.length){
-			somme = somme+tab[x-1][y+1];
+		if(ligneCourante>0 && colonneCourante+1<tab.length){
+			somme = somme+tab[ligneCourante-1][colonneCourante+1];
 		}
-		if(y>0){
-			somme = somme+tab[x][y-1];
+		if(colonneCourante>0){
+			somme = somme+tab[ligneCourante][colonneCourante-1];
 		}
-		if(y+1<tab.length){
-			somme = somme+tab[x][y+1];
+		if(colonneCourante+1<tab.length){
+			somme = somme+tab[ligneCourante][colonneCourante+1];
 		}
-		if(x+1<tab.length && y>0){
-			somme = somme+tab[x+1][y-1];
+		if(ligneCourante+1<tab.length && colonneCourante>0){
+			somme = somme+tab[ligneCourante+1][colonneCourante-1];
 		}
-		if(x+1<tab.length){
-			somme = somme+tab[x+1][y];
+		if(ligneCourante+1<tab.length){
+			somme = somme+tab[ligneCourante+1][colonneCourante];
 		}
-		if(x+1<tab.length && y+1<tab.length){
-			somme = somme+tab[x+1][y+1];
+		if(ligneCourante+1<tab.length && colonneCourante+1<tab.length){
+			somme = somme+tab[ligneCourante+1][colonneCourante+1];
 		}
 		return somme;
 	}
