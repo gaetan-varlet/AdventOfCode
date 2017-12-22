@@ -1,1 +1,8 @@
-/target/
+.settings/
+target/
+.project
+.classpath
+*.class
+*.iml
+.idea/
+.git-credentials
