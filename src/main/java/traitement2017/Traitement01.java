@@ -1,6 +1,6 @@
-package exercice01;
+package traitement2017;
 
-public class Exercice1 {
+public class Traitement01 {
 
     /**
      * parcours de la chaine chiffre par chiffre de manière circulaire, en se disant que le premier chiffre est à la suite du dernier. <br/>

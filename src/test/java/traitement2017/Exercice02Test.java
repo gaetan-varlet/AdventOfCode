@@ -1,10 +1,10 @@
 
-package exercice02;
+package traitement2017;
 
 import org.junit.Test;
 
-import exercice02.Traitement2A;
-import exercice02.Traitement2B;
+import traitement2017.Traitement02A;
+import traitement2017.Traitement02B;
 import utils.MonReader;
 
 import static org.junit.Assert.*;
@@ -19,11 +19,11 @@ public class Exercice02Test{
     private static Charset charset = StandardCharsets.UTF_8;
 
     @Test
-    public void exercice1Test() throws IOException{
+    public void traitementTest() throws IOException{
 	MonReader monReader = new MonReader();
-	Traitement2A traitement2A = new Traitement2A();
+	Traitement02A traitement2A = new Traitement02A();
 	monReader.addLigneListener(traitement2A);
-	Traitement2B traitement2B = new Traitement2B();
+	Traitement02B traitement2B = new Traitement02B();
 	monReader.addLigneListener(traitement2B);
 	monReader.lireFichier(file, charset);
 

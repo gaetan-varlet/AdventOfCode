@@ -1,10 +1,10 @@
-package exercice02;
+package traitement2017;
 
 import java.util.Arrays;
 
 import utils.LigneListener;
 
-public class Traitement2B implements LigneListener {
+public class Traitement02B implements LigneListener {
 
     private int somme;
 

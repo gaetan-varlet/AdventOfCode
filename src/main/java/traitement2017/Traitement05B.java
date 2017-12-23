@@ -1,6 +1,6 @@
-package exercice05;
+package traitement2017;
 
-public class Traitement5B extends Traitement5 {
+public class Traitement05B extends Traitement05 {
 
     @Override
     public void fichierFerme() {

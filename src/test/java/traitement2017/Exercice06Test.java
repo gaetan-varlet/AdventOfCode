@@ -1,5 +1,5 @@
 
-package exercice06;
+package traitement2017;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 import org.junit.Before;
 import org.junit.Test;
 
-import exercice06.Traitement6;
+import traitement2017.Traitement06;
 import utils.MonReader;
 
 
@@ -26,7 +26,7 @@ public class Exercice06Test{
     @Test
     public void exercice6TestA1() throws IOException {
 	MonReader monReader = new MonReader();
-	Traitement6 traitement6 = new Traitement6();
+	Traitement06 traitement6 = new Traitement06();
 	monReader.addLigneListener(traitement6);
 	monReader.lireFichier("src/test/resources/inputTestExercice06a.txt", charset);	
 
@@ -37,7 +37,7 @@ public class Exercice06Test{
     @Test
     public void exercice6TestA2() throws IOException {
 	MonReader monReader = new MonReader();
-	Traitement6 traitement6 = new Traitement6();
+	Traitement06 traitement6 = new Traitement06();
 	monReader.addLigneListener(traitement6);
 	monReader.lireFichier("src/test/resources/inputExercice06.txt", charset);	
 

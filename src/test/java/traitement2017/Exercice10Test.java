@@ -1,5 +1,5 @@
 
-package exercice10;
+package traitement2017;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,6 +9,7 @@ import java.nio.charset.StandardCharsets;
 
 import org.junit.Test;
 
+import traitement2017.Traitement10;
 import utils.MonReader;
 
 

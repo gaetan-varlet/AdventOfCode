@@ -1,4 +1,4 @@
-package exercice10;
+package traitement2017;
 
 import java.util.Arrays;
 

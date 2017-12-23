@@ -1,4 +1,4 @@
-package exercice05;
+package traitement2017;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import utils.ClotureListener;
 import utils.LigneListener;
 
-public abstract class Traitement5 implements LigneListener, ClotureListener{
+public abstract class Traitement05 implements LigneListener, ClotureListener{
 
     protected int nombreEtapeSortirListe;
 

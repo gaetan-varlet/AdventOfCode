@@ -1,5 +1,5 @@
 
-package exercice09;
+package traitement2017;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 
 import org.junit.Test;
 
-import exercice09.Traitement9;
+import traitement2017.Traitement09;
 import utils.MonReader;
 
 
@@ -20,7 +20,7 @@ public class Exercice09Test{
     @Test
     public void exercice9Test1() throws IOException {
 	MonReader monReader = new MonReader();
-	Traitement9 traitement9 = new Traitement9();
+	Traitement09 traitement9 = new Traitement09();
 	monReader.addLigneListener(traitement9);
 	monReader.lireFichier("src/test/resources/inputTestExercice09a.1.txt", charset);		
 	assertEquals(1, traitement9.getNombreDeGroupe());
@@ -58,7 +58,7 @@ public class Exercice09Test{
     @Test
     public void exercice9Test2() throws IOException {
 	MonReader monReader = new MonReader();
-	Traitement9 traitement9 = new Traitement9();
+	Traitement09 traitement9 = new Traitement09();
 	monReader.addLigneListener(traitement9);
 	monReader.lireFichier("src/test/resources/inputTestExercice09b.1.txt", charset);		
 	assertEquals(0, traitement9.getNombreCaractereEntreChevron());
@@ -85,7 +85,7 @@ public class Exercice09Test{
     @Test
     public void exercice9Test3() throws IOException {
 	MonReader monReader = new MonReader();
-	Traitement9 traitement9 = new Traitement9();
+	Traitement09 traitement9 = new Traitement09();
 	monReader.addLigneListener(traitement9);
 	monReader.lireFichier("src/test/resources/inputExercice09.txt", charset);		
 	assertEquals(1605, traitement9.getNombreDeGroupe());
@@ -96,7 +96,7 @@ public class Exercice09Test{
     @Test
     public void exercice9Test4() throws IOException {
 	MonReader monReader = new MonReader();
-	Traitement9 traitement9 = new Traitement9();
+	Traitement09 traitement9 = new Traitement09();
 	monReader.addLigneListener(traitement9);
 	monReader.lireFichier("src/test/resources/inputExercice09Olivier.txt", charset);		
 	assertEquals(1325, traitement9.getNombreDeGroupe());

@@ -1,5 +1,5 @@
 
-package exercice05;
+package traitement2017;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,9 +10,9 @@ import java.nio.charset.StandardCharsets;
 import org.junit.Before;
 import org.junit.Test;
 
-import exercice05.Traitement5;
-import exercice05.Traitement5A;
-import exercice05.Traitement5B;
+import traitement2017.Traitement05;
+import traitement2017.Traitement05A;
+import traitement2017.Traitement05B;
 import utils.MonReader;
 
 
@@ -29,7 +29,7 @@ public class Exercice05Test{
 
     @Test
     public void exercice5TestA1() throws IOException {
-	Traitement5 traitement5 = new Traitement5A();
+	Traitement05 traitement5 = new Traitement05A();
 	monReader.addLigneListener(traitement5);
 	monReader.setClotureListener(traitement5);
 	monReader.lireFichier("src/test/resources/inputTestExercice05a.txt", charset);	
@@ -39,7 +39,7 @@ public class Exercice05Test{
 
     @Test
     public void exercice5TestA2() throws IOException {
-	Traitement5 traitement5 = new Traitement5A();
+	Traitement05 traitement5 = new Traitement05A();
 	monReader.addLigneListener(traitement5);
 	monReader.setClotureListener(traitement5);
 	monReader.lireFichier("src/test/resources/inputExercice05.txt", charset);	
@@ -49,7 +49,7 @@ public class Exercice05Test{
 
     @Test
     public void exercice5TestB1() throws IOException {
-	Traitement5 traitement5 = new Traitement5B();
+	Traitement05 traitement5 = new Traitement05B();
 	monReader.addLigneListener(traitement5);
 	monReader.setClotureListener(traitement5);
 	monReader.lireFichier("src/test/resources/inputTestExercice05a.txt", charset);	
@@ -59,7 +59,7 @@ public class Exercice05Test{
 
     @Test
     public void exercice5TestB2() throws IOException {
-	Traitement5 traitement5 = new Traitement5B();
+	Traitement05 traitement5 = new Traitement05B();
 	monReader.addLigneListener(traitement5);
 	monReader.setClotureListener(traitement5);
 	monReader.lireFichier("src/test/resources/inputExercice05.txt", charset);	

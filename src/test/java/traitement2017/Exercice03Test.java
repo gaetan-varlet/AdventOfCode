@@ -1,15 +1,17 @@
 
-package exercice03;
+package traitement2017;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import traitement2017.Traitement03;
+
 public class Exercice03Test{
 
 	@Test
-	public void traitement3Test() throws Exception{
-		Exercice3 exercice3 = new Exercice3();
+	public void traitementTest() throws Exception{
+		Traitement03 exercice3 = new Traitement03();
 
 		exercice3.setInput(1);
 		exercice3.traitement(true);
@@ -31,7 +33,7 @@ public class Exercice03Test{
 		exercice3.traitement(true);
 		assertEquals(326,exercice3.getDistanceDeManhattan());
 		
-		exercice3 = new Exercice3();
+		exercice3 = new Traitement03();
 		exercice3.setInput(361527);
 		exercice3.traitement(false);
 		assertEquals(363010, exercice3.getValeurSuperieure());

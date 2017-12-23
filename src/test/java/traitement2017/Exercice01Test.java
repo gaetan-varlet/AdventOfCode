@@ -1,9 +1,9 @@
 
-package exercice01;
+package traitement2017;
 
 import org.junit.Test;
 
-import exercice01.Exercice1;
+import traitement2017.Traitement01;
 
 import static org.junit.Assert.*;
 
@@ -33,8 +33,8 @@ public class Exercice01Test{
 	    + "6942589996534179549171859786241718727295379";
 
     @Test
-    public void exercice1Test(){
-	Exercice1 exercice1 = new Exercice1();
+    public void traitementTest(){
+	Traitement01 exercice1 = new Traitement01();
 
 	assertEquals(3,exercice1.traitement("1122",1));
 	assertEquals(4,exercice1.traitement("1111",1));

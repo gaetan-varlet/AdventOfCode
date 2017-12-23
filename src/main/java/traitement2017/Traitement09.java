@@ -1,11 +1,11 @@
-package exercice09;
+package traitement2017;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import utils.LigneListener;
 
-public class Traitement9 implements LigneListener{
+public class Traitement09 implements LigneListener{
     
     private int nombreDeGroupe;
     private int score;

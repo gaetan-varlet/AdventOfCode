@@ -1,6 +1,6 @@
-package exercice03;
+package traitement2017;
 
-public class Exercice3 {
+public class Traitement03 {
 
 	// nombres de lignes et de colonnes dans le tableau que l'on crée
 	// (doit être impair pour placer un chiffre au centre)

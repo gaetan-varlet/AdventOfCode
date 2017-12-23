@@ -1,4 +1,4 @@
-package exercice06;
+package traitement2017;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import utils.LigneListener;
 
-public class Traitement6 implements LigneListener{
+public class Traitement06 implements LigneListener{
 
     private int nombreDeTour;
     private int tailleCycle;

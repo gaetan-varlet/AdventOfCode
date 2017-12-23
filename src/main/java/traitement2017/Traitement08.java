@@ -1,4 +1,4 @@
-package exercice08;
+package traitement2017;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import java.util.Map;
 import utils.ClotureListener;
 import utils.LigneListener;
 
-public class Traitement8 implements LigneListener, ClotureListener{
+public class Traitement08 implements LigneListener, ClotureListener{
 
     private int maximumTemporaire;
 
