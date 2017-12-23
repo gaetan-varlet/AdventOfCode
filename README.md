@@ -7,7 +7,7 @@ Les programmes sont exécutés sous forme de tests unitaures dans le dossier src
 Les données sous forme de fichiers dans le dossier src/test/resources.  
 Les données sur quelques caractères sont directement dans les classes de tests.
 
-** résultats année 2017 :**  
+**résultats année 2017 :**    
 1. 2/2
 2. 2/2
 3. 2/2
