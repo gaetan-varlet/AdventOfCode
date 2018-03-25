@@ -1,4 +1,3 @@
-
 package traitement2017;
 
 import org.junit.Test;
@@ -15,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Exercice02Test{
 
-    private static String file = "src/test/resources/inputExercice02.txt";
+    private static String file = "src/test/resources/traitement2017/inputExercice02.txt";
     private static Charset charset = StandardCharsets.UTF_8;
 
     @Test

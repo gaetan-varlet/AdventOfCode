@@ -28,7 +28,7 @@ public class Exercice06Test{
 	MonReader monReader = new MonReader();
 	Traitement06 traitement6 = new Traitement06();
 	monReader.addLigneListener(traitement6);
-	monReader.lireFichier("src/test/resources/inputTestExercice06a.txt", charset);	
+	monReader.lireFichier("src/test/resources/traitement2017/inputTestExercice06a.txt", charset);	
 
 	assertEquals(5,traitement6.getNombreDeTour());
 	assertEquals(4,traitement6.getTailleCycle());
@@ -39,7 +39,7 @@ public class Exercice06Test{
 	MonReader monReader = new MonReader();
 	Traitement06 traitement6 = new Traitement06();
 	monReader.addLigneListener(traitement6);
-	monReader.lireFichier("src/test/resources/inputExercice06.txt", charset);	
+	monReader.lireFichier("src/test/resources/traitement2017/inputExercice06.txt", charset);	
 
 	assertEquals(7864,traitement6.getNombreDeTour());
 	assertEquals(1695,traitement6.getTailleCycle());

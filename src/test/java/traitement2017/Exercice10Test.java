@@ -23,7 +23,7 @@ public class Exercice10Test{
 		Traitement10 traitement10 = new Traitement10();
 		traitement10.setLongueurListe(5);
 		monReader.addLigneListener(traitement10);
-		monReader.lireFichier("src/test/resources/inputTestExercice10a.txt", charset);		
+		monReader.lireFichier("src/test/resources/traitement2017/inputTestExercice10a.txt", charset);		
 		assertEquals(12, traitement10.getResultat());
 	}
 	
@@ -33,7 +33,7 @@ public class Exercice10Test{
 		Traitement10 traitement10 = new Traitement10();
 		traitement10.setLongueurListe(256);
 		monReader.addLigneListener(traitement10);
-		monReader.lireFichier("src/test/resources/inputExercice10.txt", charset);		
+		monReader.lireFichier("src/test/resources/traitement2017/inputExercice10.txt", charset);		
 		assertEquals(4114, traitement10.getResultat());
 	}
 }

@@ -23,7 +23,7 @@ public class Exercice08Test{
 	Traitement08 traitement8 = new Traitement08();
 	monReader.addLigneListener(traitement8);
 	monReader.setClotureListener(traitement8);
-	monReader.lireFichier("src/test/resources/inputTestExercice08.txt", charset);		
+	monReader.lireFichier("src/test/resources/traitement2017/inputTestExercice08.txt", charset);		
 	assertEquals(1, traitement8.getMaximumFinal());
 	assertEquals(10, traitement8.getMaximumTemporaire());
     }
@@ -34,7 +34,7 @@ public class Exercice08Test{
 	Traitement08 traitement8 = new Traitement08();
 	monReader.addLigneListener(traitement8);
 	monReader.setClotureListener(traitement8);
-	monReader.lireFichier("src/test/resources/inputExercice08.txt", charset);		
+	monReader.lireFichier("src/test/resources/traitement2017/inputExercice08.txt", charset);		
 	assertEquals(7787, traitement8.getMaximumFinal());
 	assertEquals(8997, traitement8.getMaximumTemporaire());
     }

@@ -32,7 +32,7 @@ public class Exercice05Test{
 	Traitement05 traitement5 = new Traitement05A();
 	monReader.addLigneListener(traitement5);
 	monReader.setClotureListener(traitement5);
-	monReader.lireFichier("src/test/resources/inputTestExercice05a.txt", charset);	
+	monReader.lireFichier("src/test/resources/traitement2017/inputTestExercice05a.txt", charset);	
 
 	assertEquals(5,traitement5.getNombreEtapeSortirListe());
     }
@@ -42,7 +42,7 @@ public class Exercice05Test{
 	Traitement05 traitement5 = new Traitement05A();
 	monReader.addLigneListener(traitement5);
 	monReader.setClotureListener(traitement5);
-	monReader.lireFichier("src/test/resources/inputExercice05.txt", charset);	
+	monReader.lireFichier("src/test/resources/traitement2017/inputExercice05.txt", charset);	
 
 	assertEquals(387096,traitement5.getNombreEtapeSortirListe());
     }
@@ -52,7 +52,7 @@ public class Exercice05Test{
 	Traitement05 traitement5 = new Traitement05B();
 	monReader.addLigneListener(traitement5);
 	monReader.setClotureListener(traitement5);
-	monReader.lireFichier("src/test/resources/inputTestExercice05a.txt", charset);	
+	monReader.lireFichier("src/test/resources/traitement2017/inputTestExercice05a.txt", charset);	
 
 	assertEquals(10,traitement5.getNombreEtapeSortirListe());
     }
@@ -62,7 +62,7 @@ public class Exercice05Test{
 	Traitement05 traitement5 = new Traitement05B();
 	monReader.addLigneListener(traitement5);
 	monReader.setClotureListener(traitement5);
-	monReader.lireFichier("src/test/resources/inputExercice05.txt", charset);	
+	monReader.lireFichier("src/test/resources/traitement2017/inputExercice05.txt", charset);	
 
 	assertEquals(28040648,traitement5.getNombreEtapeSortirListe());
     }
