@@ -1,6 +1,6 @@
-# AdventOfCode2017
+# Advent Of Code
 
-http://adventofcode.com/2017
+http://adventofcode.com
 
 Les traitements des exercices sont dans le dossier src/main/java.  
 Les programmes sont exécutés sous forme de tests unitaures dans le dossier src/test/java.  
