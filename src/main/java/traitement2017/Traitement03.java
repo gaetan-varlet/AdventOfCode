@@ -35,22 +35,25 @@ public class Traitement03 {
 	}
 
 	/**
-	 * réalise le traitementA (calcul de la distance de Manhattan) ou le traitement B (calcul de la première
-	 * valeur supérieure à l'input). L'input doit être renseigné et être un nombre entier compris entre 1 et 9000.
-	 * Pour réaliser le traitement B, il faut repartir d'un tableau vide et donc créer un nouvel objet Exercice3.
+	 * réalise le traitementA (calcul de la distance de Manhattan)
+	 * ou le traitement B (calcul de la première valeur supérieure à l'input). <br>
+	 * L'input doit être renseigné et être un nombre entier compris entre 1 et 9000.<br>
+	 * Pour réaliser le traitement B, il faut repartir d'un tableau vide
+	 * et donc créer un nouvel objet Exercice3.
 	 * @param traitementA true pour faire le traitementA, false pour faire le traitementB
 	 * @throws IllegalArgumentException si l'input est <= 0
 	 * @throws Exception si lors de l'appel au traitementB, le tableau est déjà rempli
 	 */
 	protected void traitement(boolean traitementA) throws Exception{
 		if(input<=0){
-			throw new IllegalArgumentException("input doit être un nombre entier compris entre 1 et 9000");
+			throw new IllegalArgumentException(
+					"input doit être un nombre entier compris entre 1 et 9000");
 		}
 		if(traitementA==false && tab[0][0]!=0){
-			throw new Exception("vous devez instancier un nouvel objet pour calculer la première valeur "
-					+ "supérieure de l'input");
+			throw new Exception("vous devez instancier un nouvel objet "
+					+ "pour calculer la première valeur supérieure de l'input");
 		}
-		
+
 		remplissageTableau(traitementA);
 		calculPositionInput();
 		calculDistanceDeManhattan();
@@ -64,7 +67,8 @@ public class Traitement03 {
 		ligneCourante = positionInitial;
 		colonneCourante = positionInitial;
 
-		// déclaration du chiffre qu'on va inscrire dans le tableau, en commençant par 2 car on a déja écrit 1;
+		// déclaration du chiffre qu'on va inscrire dans le tableau
+		// en commençant par 2 car on a déja écrit 1;
 		int k=2;
 		// on boucle en remplissant le tableau en escargot
 		for (int i = 0; i < nombreTourDeBoucle; i++) {
@@ -134,9 +138,10 @@ public class Traitement03 {
 			}	
 		}
 	}
-	
+
 	private void calculDistanceDeManhattan(){
-		distanceDeManhattan = Math.abs(inputCoordLigne-positionInitial)+Math.abs(inputCoordCol-positionInitial);
+		distanceDeManhattan = 
+				Math.abs(inputCoordLigne-positionInitial)+Math.abs(inputCoordCol-positionInitial);
 	}
 
 	/**

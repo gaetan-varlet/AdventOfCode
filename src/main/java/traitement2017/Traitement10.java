@@ -17,7 +17,6 @@ public class Traitement10 implements LigneListener{
 		this.longueurListe = longueurListe;
 	}
 
-	
 	@Override
 	public void ligneLue(String ligne) {
 
@@ -53,6 +52,5 @@ public class Traitement10 implements LigneListener{
 
 		resultat=liste[0]*liste[1];
 	}
-
 
 }

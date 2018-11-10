@@ -1,4 +1,3 @@
-
 package traitement2017;
 
 import static org.junit.Assert.assertEquals;
@@ -26,7 +25,7 @@ public class Exercice10Test{
 		monReader.lireFichier("src/test/resources/traitement2017/inputTestExercice10a.txt", charset);		
 		assertEquals(12, traitement10.getResultat());
 	}
-	
+
 	@Test
 	public void exercice10TestA2() throws IOException {
 		MonReader monReader = new MonReader();
@@ -36,4 +35,5 @@ public class Exercice10Test{
 		monReader.lireFichier("src/test/resources/traitement2017/inputExercice10.txt", charset);		
 		assertEquals(4114, traitement10.getResultat());
 	}
+
 }

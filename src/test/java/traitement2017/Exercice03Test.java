@@ -1,4 +1,3 @@
-
 package traitement2017;
 
 import static org.junit.Assert.assertEquals;
@@ -32,7 +31,7 @@ public class Exercice03Test{
 		exercice3.setInput(361527);
 		exercice3.traitement(true);
 		assertEquals(326,exercice3.getDistanceDeManhattan());
-		
+
 		exercice3 = new Traitement03();
 		exercice3.setInput(361527);
 		exercice3.traitement(false);
