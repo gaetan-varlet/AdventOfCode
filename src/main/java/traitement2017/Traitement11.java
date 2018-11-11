@@ -18,7 +18,18 @@ public class Traitement11 implements LigneListener{
 	public void ligneLue(String ligne) {
 
 		String[] tableauDirection = ligne.split(",");
-		
+		calculCheminAEffectuer(tableauDirection);		
+
+		System.out.println("Coordonées d'arrivée : (" + coordXArrivee + "," + coordYArrivee + ")");
+
+		calculNombreDeplacementsMinimaux();
+
+		System.out.println("nombre de déplacements initiaux : " + tableauDirection.length);
+		System.out.println("nombre de déplacements minimum : " + nombreDeplacementMinimum);
+		System.out.println("");
+	}
+
+	private void calculCheminAEffectuer(String[] tableauDirection) {
 		for (String direction : tableauDirection) {
 			if("nw".equals(direction)) {
 				System.out.println("Déplacement initial : nw");
@@ -45,13 +56,13 @@ public class Traitement11 implements LigneListener{
 				coordXArrivee -= 1;
 				coordYArrivee -= 1;
 			}
-		}	
-		System.out.println("Coordonées d'arrivée : (" + coordXArrivee + "," + coordYArrivee + ")");
+		}
+	}
 
-		
+	private void calculNombreDeplacementsMinimaux() {
 		while (((coordXCourante == coordXArrivee) &&
 				(coordYCourante == coordYArrivee))==false) {
-			
+
 			if(coordXCourante > coordXArrivee && coordYCourante > coordYArrivee) {
 				coordXCourante -= 1;
 				coordYCourante -= 1;
@@ -82,12 +93,9 @@ public class Traitement11 implements LigneListener{
 			} else if(coordXCourante < coordXArrivee && coordYCourante == coordYArrivee) {
 				System.out.println("Déplacement optimal : se + ne");
 			}
-			
+
 			nombreDeplacementMinimum++;
 		}
-		System.out.println("nombre de déplacements initiaux : " + tableauDirection.length);
-		System.out.println("nombre de déplacements minimum : " + nombreDeplacementMinimum);
-		System.out.println("");
 	}
 
 }
