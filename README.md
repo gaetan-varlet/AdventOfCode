@@ -21,4 +21,4 @@ Les données sur quelques caractères sont directement dans les classes de tests
 8. 2/2
 9. 2/2
 10. 1/2
-11. 1/2
+11. 2/2
