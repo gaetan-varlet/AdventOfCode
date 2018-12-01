@@ -8,7 +8,7 @@ Les données sous forme de fichiers dans le dossier src/test/resources.
 Les données sur quelques caractères sont directement dans les classes de tests.
 
 **résultats année 2018 :**
-1. 0/2
+1. 2/2
 
 **résultats année 2017 :**
 1. 2/2

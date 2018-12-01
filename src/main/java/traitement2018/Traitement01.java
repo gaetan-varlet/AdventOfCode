@@ -1,9 +1,53 @@
 package traitement2018;
 
-public class Traitement01 {
+import java.util.ArrayList;
+import java.util.List;
 
-	protected int traitement(){
-		return 0;
+import utils.ClotureListener;
+import utils.LigneListener;
+
+public class Traitement01 implements LigneListener, ClotureListener {
+
+	private int somme;
+	private Integer premierNombreEnDouble = null;
+	private List<Integer> listeDesNombres = new ArrayList<>();
+	private List<Integer> listeDesSommes = new ArrayList<>();
+
+	public int getSomme() {
+		return somme;
 	}
-	
+
+	public Integer getPremierNombreEnDouble() {
+		return premierNombreEnDouble;
+	}
+
+	@Override
+	public void ligneLue(String ligne) {
+		// première partie pour calculer la somme de tous les nombres du fichier
+		somme += Integer.parseInt(ligne);
+
+		// stockage des nombres dans une liste pour la deuxième partie
+		listeDesNombres.add(Integer.parseInt(ligne));
+	}
+
+	/**
+	 * stockage de la somme après lecture de chaque chiffre jusqu'à retomber sur une
+	 * somme déjà atteinte. Il est possible de relire tous les nombres si aucun
+	 * doublon n'a été trouvé
+	 */
+	@Override
+	public void fichierFerme() {
+		listeDesSommes.add(0);
+		while (premierNombreEnDouble == null) {
+			for (Integer nombre : listeDesNombres) {
+				int nouvelleSomme = nombre + listeDesSommes.get(listeDesSommes.size() - 1);
+				if (listeDesSommes.contains(nouvelleSomme)) {
+					premierNombreEnDouble = nouvelleSomme;
+					return;
+				}
+				listeDesSommes.add(nouvelleSomme);
+			}
+		}
+	}
+
 }
