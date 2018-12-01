@@ -43,7 +43,7 @@ public class Traitement01 implements LigneListener, ClotureListener {
 		listeDesSommes.add(0);
 		while (premierNombreEnDouble == null) {
 			for (Integer nombre : listeDesNombres) {
-				sommeCourante = nombre + sommeCourante;
+				sommeCourante += nombre;
 				if (listeDesSommes.contains(sommeCourante)) {
 					premierNombreEnDouble = sommeCourante;
 					return;
