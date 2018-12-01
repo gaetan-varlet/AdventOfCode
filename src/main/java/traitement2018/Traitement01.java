@@ -1,7 +1,9 @@
 package traitement2018;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import utils.ClotureListener;
 import utils.LigneListener;
@@ -11,7 +13,8 @@ public class Traitement01 implements LigneListener, ClotureListener {
 	private int somme;
 	private Integer premierNombreEnDouble = null;
 	private List<Integer> listeDesNombres = new ArrayList<>();
-	private List<Integer> listeDesSommes = new ArrayList<>();
+	private Set<Integer> listeDesSommes = new HashSet<>();
+	private int sommeCourante;
 
 	public int getSomme() {
 		return somme;
@@ -40,12 +43,12 @@ public class Traitement01 implements LigneListener, ClotureListener {
 		listeDesSommes.add(0);
 		while (premierNombreEnDouble == null) {
 			for (Integer nombre : listeDesNombres) {
-				int nouvelleSomme = nombre + listeDesSommes.get(listeDesSommes.size() - 1);
-				if (listeDesSommes.contains(nouvelleSomme)) {
-					premierNombreEnDouble = nouvelleSomme;
+				sommeCourante = nombre + sommeCourante;
+				if (listeDesSommes.contains(sommeCourante)) {
+					premierNombreEnDouble = sommeCourante;
 					return;
 				}
-				listeDesSommes.add(nouvelleSomme);
+				listeDesSommes.add(sommeCourante);
 			}
 		}
 	}
