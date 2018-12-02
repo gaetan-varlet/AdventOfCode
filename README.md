@@ -9,6 +9,7 @@ Les données sur quelques caractères sont directement dans les classes de tests
 
 **résultats année 2018 :**
 1. 2/2
+2. 2/2
 
 **résultats année 2017 :**
 1. 2/2
