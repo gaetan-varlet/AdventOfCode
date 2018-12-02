@@ -24,7 +24,8 @@ public class Exercice07Test{
 		monReader.setClotureListener(traitement);
 		monReader.lireFichier("src/test/resources/traitement2017/inputTestExercice07.txt", charset);	
 
-		assertEquals("tknk",traitement.getNomPere());
+		assertEquals("tknk",traitement.getNomSommet());
+		assertEquals(60,traitement.getValeurCorigee());
 	}
 	
 	@Test
@@ -35,7 +36,8 @@ public class Exercice07Test{
 		monReader.setClotureListener(traitement);
 		monReader.lireFichier("src/test/resources/traitement2017/inputExercice07.txt", charset);	
 
-		assertEquals("bpvhwhh",traitement.getNomPere());
+		assertEquals("bpvhwhh",traitement.getNomSommet());
+		assertEquals(256,traitement.getValeurCorigee());
 	}
 
 
