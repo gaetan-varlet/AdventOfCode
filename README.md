@@ -18,7 +18,7 @@ Les données sur quelques caractères sont directement dans les classes de tests
 4. 2/2
 5. 2/2
 6. 2/2
-7. 0/2
+7. 1/2
 8. 2/2
 9. 2/2
 10. 1/2
