@@ -65,11 +65,9 @@ public class Traitement05 implements LigneListener {
 			int tailleListe = liste.size();
 			for (int i = 0 ; i < liste.size() -1 ; i++) {
 				if((Character.toUpperCase(liste.get(i)) == Character.toUpperCase(liste.get(i+1))) && (liste.get(i) != liste.get(i+1))) {
-					//System.out.println(i +" "+ liste.get(i) +" "+ liste.get(i+1));
 					liste.remove(i+1);
 					liste.remove(i);
-					//System.out.println(liste);
-					break;
+					i--;
 				}		
 			}
 			if(liste.size() == tailleListe) {
