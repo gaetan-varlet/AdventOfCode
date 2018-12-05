@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import utils.ClotureListener;
 import utils.LigneListener;
@@ -11,30 +13,30 @@ import utils.LigneListener;
 public class Traitement03 implements LigneListener, ClotureListener {
 
 	private Map<String, Integer> mapCoordNbValeur = new HashMap<>();
-	private Map<String, Set<String>> mapIdEnsembleCoord = new HashMap<>();
+	private Map<Integer, Set<String>> mapIdEnsembleCoord = new HashMap<>();
 	private int nombreDeSuperposition;
-	private String idRectangleSansSuperposition;
+	private Integer idRectangleSansSuperposition;
 
 	public int getNombreDeSuperposition() {
 		return nombreDeSuperposition;
 	}
 
-	public String getIdRectangleSansSuperposition() {
+	public Integer getIdRectangleSansSuperposition() {
 		return idRectangleSansSuperposition;
 	}
 
 	@Override
 	public void ligneLue(String ligne) {
-		String[] idCoord = ligne.split(" @ ");
-		String id = idCoord[0].substring(1); // suppression du #
-		String[] positionDimension = idCoord[1].split(": ");
-		String[] positionXY = positionDimension[0].split(",");
-		String [] dimensionXY = positionDimension[1].split("x");
 
-		int positionX = Integer.parseInt(positionXY[0]);
-		int positionY = Integer.parseInt(positionXY[1]);
-		int dimensionX = Integer.parseInt(dimensionXY[0]);
-		int dimensionY = Integer.parseInt(dimensionXY[1]);
+		Pattern pattern = Pattern.compile("#(.*) @ (.*),(.*): (.*)x(.*)");
+		Matcher matcher = pattern.matcher(ligne);
+		matcher.matches();
+		int id = Integer.parseInt(matcher.group(1));
+		int positionX = Integer.parseInt(matcher.group(2));
+		int positionY = Integer.parseInt(matcher.group(3));
+		int dimensionX = Integer.parseInt(matcher.group(4));
+		int dimensionY = Integer.parseInt(matcher.group(5));
+		
 
 		Set<String> coordoonees = new HashSet<>();
 		mapIdEnsembleCoord.put(id, coordoonees);
@@ -44,7 +46,6 @@ public class Traitement03 implements LigneListener, ClotureListener {
 				coordoonees.add(x+"."+y);
 			}
 		}
-		//		System.out.println();
 	}
 
 	@Override
@@ -60,10 +61,10 @@ public class Traitement03 implements LigneListener, ClotureListener {
 		 *  si ce coordooné est présent dans chaque coordonnée de chacun des autres rectangle.
 		 *  Si c'est le cas, estSuperpose passe à true 
 		 */
-		for (String id : mapIdEnsembleCoord.keySet()) {
+		for (Integer id : mapIdEnsembleCoord.keySet()) {
 			boolean estSuperpose = false;
 			outerloop:
-			for (String idAutreRectangle : mapIdEnsembleCoord.keySet()) {
+			for (Integer idAutreRectangle : mapIdEnsembleCoord.keySet()) {
 				if(!id.equals(idAutreRectangle)) {
 					for (String coordonnee : mapIdEnsembleCoord.get(id)) {
 						if(mapIdEnsembleCoord.get(idAutreRectangle).contains(coordonnee)) {

@@ -23,7 +23,7 @@ public class Exercice03Test{
 		monReader.lireFichier("src/test/resources/traitement2018/inputExercice03Test1.txt", charset);
 
 		assertEquals(4, traitement.getNombreDeSuperposition());
-		assertEquals("3", traitement.getIdRectangleSansSuperposition());
+		assertEquals(Integer.valueOf(3), traitement.getIdRectangleSansSuperposition());
 	}
 	
 	@Test
@@ -35,7 +35,7 @@ public class Exercice03Test{
 		monReader.lireFichier("src/test/resources/traitement2018/inputExercice03.txt", charset);
 
 		assertEquals(108961, traitement.getNombreDeSuperposition());
-		assertEquals("681", traitement.getIdRectangleSansSuperposition());
+		assertEquals(Integer.valueOf(681), traitement.getIdRectangleSansSuperposition());
 	}
 
 }
