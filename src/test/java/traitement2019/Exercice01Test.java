@@ -29,7 +29,7 @@ public class Exercice01Test {
 		monReader.addLigneListener(traitement1);
 		monReader.lireFichier("src/test/resources/traitement2019/inputExercice01.txt", charset);
 
-		assertEquals(3126794, traitement1.getSomme());
+		assertEquals(3348430, traitement1.getSomme());
 	}
 
 }

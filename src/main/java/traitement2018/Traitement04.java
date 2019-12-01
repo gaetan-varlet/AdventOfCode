@@ -8,11 +8,12 @@ import java.util.regex.Pattern;
 
 import utils.ClotureListener;
 import utils.LigneListener;
+
 public class Traitement04 implements LigneListener, ClotureListener {
-	
+
 	private int resultat;
 	private List<String> listeDonnees = new ArrayList<>();
-	
+
 	public int getResultat() {
 		return resultat;
 	}
@@ -30,12 +31,12 @@ public class Traitement04 implements LigneListener, ClotureListener {
 		for (String ligne : listeDonnees) {
 			Matcher matcherLigne = patternLigne.matcher(ligne);
 			matcherLigne.matches();
-			String dateTime = matcherLigne.group(1);
+			// String dateTime = matcherLigne.group(1);
 			String texte = matcherLigne.group(2);
-			if(texte.contains("Guard")) {
+			if (texte.contains("Guard")) {
 				Matcher matcherTexte = patternTexte.matcher(texte);
 				matcherTexte.matches();
-				int idGuard = Integer.parseInt(matcherTexte.group(1));
+				// int idGuard = Integer.parseInt(matcherTexte.group(1));
 				System.out.println();
 			}
 		}
