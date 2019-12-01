@@ -30,6 +30,7 @@ public class Exercice01Test {
 		monReader.lireFichier("src/test/resources/traitement2019/inputExercice01.txt", charset);
 
 		assertEquals(3348430, traitement1.getSomme());
+		assertEquals(5019767, traitement1.getSommeRecursive());
 	}
 
 }
