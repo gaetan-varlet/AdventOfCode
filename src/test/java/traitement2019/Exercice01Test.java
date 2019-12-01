@@ -1,11 +1,13 @@
 package traitement2019;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+
 import utils.MonReader;
 
 public class Exercice01Test {
@@ -21,7 +23,7 @@ public class Exercice01Test {
 
 		assertEquals((2 + 2 + 654 + 33583), traitement1.getSomme());
 	}
-
+	
 	@Test
 	public void traitement() throws IOException {
 		MonReader monReader = new MonReader();

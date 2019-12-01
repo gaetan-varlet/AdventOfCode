@@ -1,18 +1,17 @@
 package traitement2017;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import traitement2017.Traitement08;
 import utils.MonReader;
 
-
-public class Exercice08Test{
+public class Exercice08Test {
 
 	private Charset charset = StandardCharsets.UTF_8;
 
@@ -22,7 +21,7 @@ public class Exercice08Test{
 		Traitement08 traitement8 = new Traitement08();
 		monReader.addLigneListener(traitement8);
 		monReader.setClotureListener(traitement8);
-		monReader.lireFichier("src/test/resources/traitement2017/inputTestExercice08.txt", charset);		
+		monReader.lireFichier("src/test/resources/traitement2017/inputTestExercice08.txt", charset);
 		assertEquals(1, traitement8.getMaximumFinal());
 		assertEquals(10, traitement8.getMaximumTemporaire());
 	}
@@ -33,7 +32,7 @@ public class Exercice08Test{
 		Traitement08 traitement8 = new Traitement08();
 		monReader.addLigneListener(traitement8);
 		monReader.setClotureListener(traitement8);
-		monReader.lireFichier("src/test/resources/traitement2017/inputExercice08.txt", charset);		
+		monReader.lireFichier("src/test/resources/traitement2017/inputExercice08.txt", charset);
 		assertEquals(7787, traitement8.getMaximumFinal());
 		assertEquals(8997, traitement8.getMaximumTemporaire());
 	}

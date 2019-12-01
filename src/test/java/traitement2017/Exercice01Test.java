@@ -1,12 +1,10 @@
 package traitement2017;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import traitement2017.Traitement01;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
-
-public class Exercice01Test{
+public class Exercice01Test {
 
 	private String chaine = "938427449468363235935164141137457346627316468733753676977948743374917918556846129623335"
 			+ "36119926727537781269352767698854247195532916161361722988831566262541512788525823979496978744"
@@ -32,22 +30,22 @@ public class Exercice01Test{
 			+ "6942589996534179549171859786241718727295379";
 
 	@Test
-	public void traitementTest(){
+	public void traitementTest() {
 		Traitement01 exercice1 = new Traitement01();
 
-		assertEquals(3,exercice1.traitement("1122",1));
-		assertEquals(4,exercice1.traitement("1111",1));
-		assertEquals(0,exercice1.traitement("1234",1));
-		assertEquals(9,exercice1.traitement("91212129",1));
-		assertEquals(1089,exercice1.traitement(chaine,1));
+		assertEquals(3, exercice1.traitement("1122", 1));
+		assertEquals(4, exercice1.traitement("1111", 1));
+		assertEquals(0, exercice1.traitement("1234", 1));
+		assertEquals(9, exercice1.traitement("91212129", 1));
+		assertEquals(1089, exercice1.traitement(chaine, 1));
 
-		assertEquals(6,exercice1.traitement("1212",2));
-		assertEquals(0,exercice1.traitement("1221",2));
-		assertEquals(4,exercice1.traitement("123425",3));
-		assertEquals(12,exercice1.traitement("123123",3));
-		assertEquals(4,exercice1.traitement("12131415",4));
-		assertEquals(1156,exercice1.traitement(chaine,chaine.length()/2));
+		assertEquals(6, exercice1.traitement("1212", 2));
+		assertEquals(0, exercice1.traitement("1221", 2));
+		assertEquals(4, exercice1.traitement("123425", 3));
+		assertEquals(12, exercice1.traitement("123123", 3));
+		assertEquals(4, exercice1.traitement("12131415", 4));
+		assertEquals(1156, exercice1.traitement(chaine, chaine.length() / 2));
 
-		assertEquals(2134,chaine.length());	
+		assertEquals(2134, chaine.length());
 	}
 }

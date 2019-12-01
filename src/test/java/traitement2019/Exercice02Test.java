@@ -3,7 +3,9 @@ package traitement2019;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+
 import utils.MonReader;
 
 public class Exercice02Test {

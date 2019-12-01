@@ -1,13 +1,13 @@
 package traitement2018;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import utils.MonReader;
 
@@ -16,7 +16,7 @@ public class Exercice04Test {
 	private static Charset charset = StandardCharsets.UTF_8;
 
 	@Test
-	@Ignore
+	@Disabled
 	public void traitementTest1() throws IOException {
 		MonReader monReader = new MonReader();
 		Traitement04 traitement = new Traitement04();
@@ -28,7 +28,7 @@ public class Exercice04Test {
 	}
 
 	@Test
-	@Ignore
+	@Disabled
 	public void traitement() throws IOException {
 		MonReader monReader = new MonReader();
 		Traitement04 traitement = new Traitement04();

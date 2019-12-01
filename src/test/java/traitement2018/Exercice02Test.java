@@ -1,21 +1,21 @@
 package traitement2018;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import utils.MonReader;
 
-public class Exercice02Test{
+public class Exercice02Test {
 
 	private static Charset charset = StandardCharsets.UTF_8;
 
 	@Test
-	public void traitementTest1() throws IOException{	
+	public void traitementTest1() throws IOException {
 		MonReader monReader = new MonReader();
 		Traitement02 traitement = new Traitement02();
 		monReader.addLigneListener(traitement);
@@ -24,9 +24,9 @@ public class Exercice02Test{
 
 		assertEquals(12, traitement.getChecksum());
 	}
-	
+
 	@Test
-	public void traitementTest2() throws IOException{	
+	public void traitementTest2() throws IOException {
 		MonReader monReader = new MonReader();
 		Traitement02 traitement = new Traitement02();
 		monReader.addLigneListener(traitement);
@@ -35,9 +35,9 @@ public class Exercice02Test{
 
 		assertEquals("fgij", traitement.getLettresEnCommun());
 	}
-	
+
 	@Test
-	public void traitement() throws IOException{	
+	public void traitement() throws IOException {
 		MonReader monReader = new MonReader();
 		Traitement02 traitement = new Traitement02();
 		monReader.addLigneListener(traitement);

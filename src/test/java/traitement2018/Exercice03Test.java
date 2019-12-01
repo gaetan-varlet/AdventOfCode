@@ -1,21 +1,21 @@
 package traitement2018;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import utils.MonReader;
 
-public class Exercice03Test{
+public class Exercice03Test {
 
 	private static Charset charset = StandardCharsets.UTF_8;
 
 	@Test
-	public void traitementTest1() throws IOException{	
+	public void traitementTest1() throws IOException {
 		MonReader monReader = new MonReader();
 		Traitement03 traitement = new Traitement03();
 		monReader.addLigneListener(traitement);
@@ -25,9 +25,9 @@ public class Exercice03Test{
 		assertEquals(4, traitement.getNombreDeSuperposition());
 		assertEquals(Integer.valueOf(3), traitement.getIdRectangleSansSuperposition());
 	}
-	
+
 	@Test
-	public void traitement() throws IOException{	
+	public void traitement() throws IOException {
 		MonReader monReader = new MonReader();
 		Traitement03 traitement = new Traitement03();
 		monReader.addLigneListener(traitement);
