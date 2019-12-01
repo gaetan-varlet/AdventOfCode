@@ -14,7 +14,7 @@ Les données sur quelques caractères sont directement dans les classes de tests
 1. 2/2
 2. 2/2
 3. 2/2
-4. O/2
+4. 0/2
 5. 2/2
 
 **résultats année 2017 :**
