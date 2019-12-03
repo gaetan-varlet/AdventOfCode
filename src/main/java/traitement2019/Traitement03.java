@@ -11,11 +11,17 @@ import utils.LigneListener;
 public class Traitement03 implements LigneListener, ClotureListener {
 
 	private Integer manhattanDistance = null;
+	private int minSumSteps;
+
 	List<List<Point>> liste2Chemins = new ArrayList<>();
 	Set<Point> croisements = new HashSet<>();
 
 	public int getManhattanDistance() {
 		return manhattanDistance.intValue();
+	}
+
+	public int getMinSumSteps() {
+		return minSumSteps;
 	}
 
 	@Override
@@ -80,6 +86,14 @@ public class Traitement03 implements LigneListener, ClotureListener {
 			} else if (point.getManhattanDistance() < manhattanDistance.intValue()) {
 				manhattanDistance = point.getManhattanDistance();
 			}
+			// partie 2
+			int sumSteps = chemin1.indexOf(point) + chemin2.indexOf(point) + 2;
+			if (minSumSteps == 0) {
+				minSumSteps = sumSteps;
+			} else if (sumSteps < minSumSteps) {
+				minSumSteps = sumSteps;
+			}
+
 		}
 	}
 

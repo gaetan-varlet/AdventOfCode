@@ -29,24 +29,28 @@ public class Exercice03Test {
 	public void traitementTest1() throws IOException {
 		monReader.lireFichier("src/test/resources/traitement2019/inputExercice03Test1.txt", charset);
 		assertEquals(6, traitement.getManhattanDistance());
+		assertEquals(30, traitement.getMinSumSteps());
 	}
 
 	@Test
 	public void traitementTest2() throws IOException {
 		monReader.lireFichier("src/test/resources/traitement2019/inputExercice03Test2.txt", charset);
 		assertEquals(159, traitement.getManhattanDistance());
+		assertEquals(610, traitement.getMinSumSteps());
 	}
 
 	@Test
 	public void traitementTest3() throws IOException {
 		monReader.lireFichier("src/test/resources/traitement2019/inputExercice03Test3.txt", charset);
 		assertEquals(135, traitement.getManhattanDistance());
+		assertEquals(410, traitement.getMinSumSteps());
 	}
 
 	@Test
 	public void traitement() throws IOException {
 		monReader.lireFichier("src/test/resources/traitement2019/inputExercice03.txt", charset);
-		assertEquals(0, traitement.getManhattanDistance());
+		assertEquals(266, traitement.getManhattanDistance());
+		assertEquals(19242, traitement.getMinSumSteps());
 	}
 
 }
